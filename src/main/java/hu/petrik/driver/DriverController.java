@@ -96,6 +96,12 @@ public class DriverController {
         updateButton.setDisable(true);
         deleteButton.setDisable(true);
     }
+    private void setStateToSubmit() {
+        submitButton.setText("Submit");
+        driverTable.setDisable(false);
+        updateButton.setDisable(false);
+        deleteButton.setDisable(false);
+    }
     @FXML
     public void deleteClick(ActionEvent actionEvent) {
         Driver selected = getSelectedDriver();
@@ -120,8 +126,7 @@ public class DriverController {
         setStateToSubmit();
     }
 
-    private void setStateToSubmit() {
-    }
+
 
     private Driver getSelectedDriverNullMatter() {
         int selectedIndex = driverTable.getSelectionModel().getSelectedIndex();
